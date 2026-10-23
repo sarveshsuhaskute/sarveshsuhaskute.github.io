@@ -111,7 +111,9 @@ h2{font-size:clamp(2.2rem,5vw,3.8rem);margin-bottom:56px;max-width:800px}
 .stat{padding:28px;border:1px solid var(--line);border-radius:var(--r);background:var(--card);transition:.3s}
 .stat:hover{transform:translateY(-6px);border-color:rgba(var(--rgb),.6)}
 .stat b{display:block;font-family:'Space Grotesk';font-size:3rem;line-height:1;margin-bottom:8px}
-.stat span{color:var(--mute);font-size:.9rem}
+.stat span{display:block;color:var(--text);font-size:.95rem;line-height:1.4}
+.stat small{display:block;margin-top:10px;font:500 .7rem 'JetBrains Mono',monospace;color:var(--b);letter-spacing:.08em;text-transform:uppercase}
+.stat{display:flex;flex-direction:column}
 
 /* bento skills */
 .bento{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
@@ -250,14 +252,14 @@ footer{padding:36px 0;border-top:1px solid var(--line);text-align:center;color:v
   <div class="about">
     <div>
       <p class="rv">A B.Tech Computer Science student at VIT Vellore. These days I'm sharpening my DSA, building projects, and working on myself.</p>
-      <p class="rv" style="--d:.1s">This summer I interned as a <strong>Software Engineer at Supertech Instrumentation</strong>, shipping REST APIs and a React dashboard used by plant operators, and cutting slow queries from 850 ms to 120 ms.</p>
-      <p class="rv" style="--d:.2s">I care about <strong>correctness, performance and testing</strong> — my projects ship with benchmarks, fault-injection tests and CI.</p>
+      <p class="rv" style="--d:.1s">This summer I was a <strong>software engineering intern at Supertech Instrumentation</strong>, building the APIs and React dashboard that plant operators use every day — and making them about 7× faster along the way.</p>
+      <p class="rv" style="--d:.2s"><strong>I like proving my work, not just claiming it.</strong> My projects come with benchmarks, tests that deliberately try to break them, and CI that checks every change.</p>
     </div>
     <div class="stats">
-      <div class="stat rv"><b class="grad-text" data-n="9.36" data-s="">0</b><span>CGPA at VIT</span></div>
-      <div class="stat rv" style="--d:.1s"><b class="grad-text" data-n="85" data-s="%">0</b><span>Faster queries at my internship</span></div>
-      <div class="stat rv" style="--d:.2s"><b class="grad-text" data-n="257" data-s="×">0</b><span>Peak query speed-up (RouteWise)</span></div>
-      <div class="stat rv" style="--d:.3s"><b class="grad-text" data-n="12" data-s="">0</b><span>REST APIs shipped in production</span></div>
+      <div class="stat rv"><b class="grad-text" data-n="9.36" data-s="">0</b><span>CGPA</span><small>VIT Vellore</small></div>
+      <div class="stat rv" style="--d:.1s"><b class="grad-text" data-n="120" data-s=" ms">0</b><span>API response time, down from 850 ms</span><small>Supertech internship</small></div>
+      <div class="stat rv" style="--d:.2s"><b class="grad-text" data-n="257" data-s="×">0</b><span>faster queries after indexing</span><small>RouteWise</small></div>
+      <div class="stat rv" style="--d:.3s"><b class="grad-text" data-n="99.25" data-s="%">0</b><span>cache hit rate, matching the kernel</span><small>eBPF prefetcher</small></div>
     </div>
   </div>
 </div></section>

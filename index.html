@@ -154,6 +154,8 @@ h2{font-size:clamp(2.2rem,5vw,3.8rem);margin-bottom:56px;max-width:800px}
 @keyframes dash{to{stroke-dashoffset:-18}}
 .art.a1{background:radial-gradient(circle at 20% 20%,var(--a),transparent 55%),radial-gradient(circle at 80% 80%,var(--b),transparent 55%),var(--deep)}
 .art.a2{background:radial-gradient(circle at 80% 20%,var(--b),transparent 55%),radial-gradient(circle at 20% 90%,var(--a),transparent 55%),var(--deep)}
+.art.a4{background:radial-gradient(circle at 75% 25%,var(--b),transparent 55%),radial-gradient(circle at 15% 85%,var(--a),transparent 55%),var(--deep)}
+.art.a5{background:radial-gradient(circle at 25% 25%,var(--c),transparent 50%),radial-gradient(circle at 80% 85%,var(--a),transparent 55%),var(--deep)}
 .art.a3{background:radial-gradient(circle at 30% 80%,var(--a),transparent 55%),radial-gradient(circle at 80% 20%,var(--c),transparent 55%),var(--deep)}
 .art::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:34px 34px;mask-image:radial-gradient(circle,#000,transparent 75%)}
 .proj-body{padding:28px;display:flex;flex-direction:column;flex:1}
@@ -231,7 +233,7 @@ footer{padding:36px 0;border-top:1px solid var(--line);text-align:center;color:v
         <div class="o" style="--i:3">B.Tech CSE @ VIT Vellore · CGPA 9.36</div>
         <div class="o" style="--i:4">SWE intern @ Supertech · May–Jul 2026</div>
         <div style="--i:5"><span class="p">$</span> <span class="k">ls ~/projects</span></div>
-        <div class="o" style="--i:6">routewise/  net-platform/  ebpf-prefetcher/</div>
+        <div class="o" style="--i:6">routewise/  netsvc/  prefetcher/  codejury/</div>
         <div style="--i:7"><span class="p">$</span> <span class="cur-blk"></span></div>
       </div>
     </div>
@@ -245,7 +247,7 @@ footer{padding:36px 0;border-top:1px solid var(--line);text-align:center;color:v
   <h2 class="rv">I like knowing what happens <span class="grad-text">below the abstraction.</span></h2>
   <div class="about">
     <div>
-      <p class="rv"><strong>I'm Sarvesh</strong> — a B.Tech Computer Science student at VIT Vellore. These days I'm sharpening my DSA, building projects, and working on myself.</p>
+      <p class="rv">A B.Tech Computer Science student at VIT Vellore. These days I'm sharpening my DSA, building projects, and working on myself.</p>
       <p class="rv" style="--d:.1s">This summer I interned as a <strong>Software Engineer at Supertech Instrumentation</strong>, shipping REST APIs and a React dashboard used by plant operators, and cutting slow queries from 850 ms to 120 ms.</p>
       <p class="rv" style="--d:.2s">I care about <strong>correctness, performance and testing</strong> — my projects ship with benchmarks, fault-injection tests and CI.</p>
     </div>
@@ -277,6 +279,7 @@ footer{padding:36px 0;border-top:1px solid var(--line);text-align:center;color:v
     <div class="cell w2 rv" style="--d:.15s"><div class="ico">⚙</div><h3>Systems &amp; Networking</h3><p>Linux internals, eBPF tracing, TCP/UDP sockets and DNS.</p><div class="tags"><span class="tag">Linux</span><span class="tag">eBPF / BCC</span><span class="tag">POSIX</span><span class="tag">Sockets</span><span class="tag">DNS</span></div></div>
     <div class="cell rv" style="--d:.1s"><div class="ico">▤</div><h3>Databases</h3><p>Schema design to tuning.</p><div class="tags"><span class="tag">MySQL</span><span class="tag">PostgreSQL</span><span class="tag">Indexing</span></div></div>
     <div class="cell rv" style="--d:.2s"><div class="ico">⌥</div><h3>DevOps</h3><p>Ship with confidence.</p><div class="tags"><span class="tag">Git</span><span class="tag">Docker</span><span class="tag">GitHub Actions</span></div></div>
+    <div class="cell w2 rv" style="--d:.15s"><div class="ico">✦</div><h3>AI &amp; ML</h3><p>Fine-tuning small language models, running them locally, and optimising how models execute.</p><div class="tags"><span class="tag">LLMs</span><span class="tag">LoRA fine-tuning</span><span class="tag">MLX</span><span class="tag">Model evaluation</span><span class="tag">Computation graphs</span><span class="tag">Markov models</span></div></div>
   </div>
 </div></section>
 
@@ -299,6 +302,16 @@ footer{padding:36px 0;border-top:1px solid var(--line);text-align:center;color:v
       <div class="proj-body"><span class="num">03 · LINUX KERNEL</span><h3>Linux File Prefetcher</h3><div class="metric"><b>99.25%</b><span>cache hit rate, matching kernel readahead</span></div><p>Daemon that traces file access with eBPF, learns sequences with a Markov model and preloads files. Traced a 26% throughput loss under memory pressure to its root cause.</p>
       <div class="proj-foot"><div class="tags" style="margin:0"><span class="tag">Python</span><span class="tag">BCC</span><span class="tag">eBPF</span><span class="tag">C</span></div></div></div>
     </div></a>
+    <a href="https://github.com/sarveshsuhaskute/CodeJury" target="_blank" rel="noopener" class="proj rv" style="--d:.1s"><div class="proj-in tilt">
+      <div class="shot"><div class="art a4"></div><svg class="dg" viewBox="0 0 400 200" aria-hidden="true"><path class="wire flow" d="M86 100 C110 100 110 58 136 58"/><path class="wire flow" d="M86 100 C110 100 110 142 136 142"/><path class="wire flow" d="M206 58 C226 58 226 100 246 100"/><path class="wire flow" d="M206 142 C226 142 226 100 246 100"/><path class="wire flow" d="M316 100 L332 100"/><rect x="16" y="85" width="70" height="30" rx="8" class="box"/><text x="51.0" y="104" class="t c">bug.py</text><rect x="136" y="43" width="70" height="30" rx="8" class="box"/><text x="171.0" y="62" class="t c">Fixer A</text><rect x="136" y="127" width="70" height="30" rx="8" class="box"/><text x="171.0" y="146" class="t c">Fixer B</text><rect x="246" y="85" width="70" height="30" rx="8" class="box"/><text x="281.0" y="104" class="t c">Critic</text><rect x="332" y="85" width="56" height="30" rx="15" class="chipb"/><text x="360" y="104" class="t c">Judge</text><text x="16" y="24" class="s">4 LORA ROLES · 1 SHARED MODEL</text><circle r="3" class="pk"><animateMotion dur="2.8s" repeatCount="indefinite" path="M86 100 C110 100 110 58 136 58 L206 58 C226 58 226 100 246 100 L332 100"/></circle><circle r="3" class="pk"><animateMotion dur="2.8s" begin="1.4s" repeatCount="indefinite" path="M86 100 C110 100 110 142 136 142 L206 142 C226 142 226 100 246 100 L332 100"/></circle></svg><span class="arrow">↗</span></div>
+      <div class="proj-body"><span class="num">04 · AI / ML · TEAM PROJECT</span><h3>CodeJury</h3><div class="metric"><b>4</b><span>LoRA roles sharing one 4-bit Phi-4-mini model</span></div><p>Local Python bug-repair system where two fixers, a critic and a judge debate a patch, all running on a Mac with MLX. Only executed, user-approved tests can reject a fix, and it answers "unresolved" rather than guess.</p>
+      <div class="proj-foot"><div class="tags" style="margin:0"><span class="tag">Python</span><span class="tag">LoRA</span><span class="tag">MLX</span><span class="tag">LLMs</span></div></div></div>
+    </div></a>
+    <a href="https://github.com/sarveshsuhaskute/compiler-optimization-for-llm" target="_blank" rel="noopener" class="proj rv" style="--d:.2s"><div class="proj-in tilt">
+      <div class="shot"><div class="art a5"></div><svg class="dg" viewBox="0 0 400 200" aria-hidden="true"><text x="16" y="24" class="s">GRAPH IR</text><text x="290" y="24" class="s">OPTIMISED</text><path class="sep" d="M240 36 V184"/><path class="wire" d="M76 60 H114"/><path class="wire" d="M76 140 H114"/><path class="wire" d="M76 60 L114 140"/><path class="wire" d="M186 60 C206 60 206 100 222 100"/><path class="wire" d="M186 140 C206 140 206 100 222 100"/><rect x="4" y="46" width="72" height="28" rx="14" class="chipb"/><text x="40" y="64" class="t c">matmul</text><rect x="4" y="126" width="72" height="28" rx="14" class="chipb"/><text x="40" y="144" class="t c">add</text><rect x="114" y="46" width="72" height="28" rx="14" class="chipb"/><text x="150" y="64" class="t c">relu</text><rect x="114" y="126" width="72" height="28" rx="14" class="chipb"/><text x="150" y="144" class="t c">norm</text><path class="wire flow" d="M222 100 H262"/><rect x="262" y="78" width="118" height="44" rx="10" class="box"/><text x="321" y="97" class="t c">fused kernel</text><text x="321" y="111" class="s c">matmul+add+relu</text><circle r="3" class="pk"><animateMotion dur="2s" repeatCount="indefinite" path="M186 60 C206 60 206 100 222 100 H262"/></circle></svg><span class="arrow">↗</span></div>
+      <div class="proj-body"><span class="num">05 · AI / ML · TEAM PROJECT</span><h3>LLM Compiler Optimizer</h3><div class="metric"><b>9</b><span>optimisation techniques on a computation-graph IR</span></div><p>Graph-based compiler optimisation for LLM-style models: operator fusion, scheduling, partitioning and learned search, plus an MNIST train → export → compile experiment.</p>
+      <div class="proj-foot"><div class="tags" style="margin:0"><span class="tag">Python</span><span class="tag">Graph IR</span><span class="tag">ML Compilers</span></div></div></div>
+    </div></a>
     </div>
 </div></section>
 
@@ -306,7 +319,7 @@ footer{padding:36px 0;border-top:1px solid var(--line);text-align:center;color:v
   <div class="eyebrow rv">04 — Journey</div>
   <h2 class="rv">The path <span class="grad-text">so far.</span></h2>
   <div class="timeline">
-    <div class="tl rv"><div class="when">MAY 2026 — JUL 2026</div><h3>Software Engineering Intern</h3><div class="org">Supertech Instrumentation Services · Thane, India</div><p>Built 12 REST endpoints (Node, Express, PostgreSQL) feeding a React dashboard for plant operators; cut 4 slow queries from 850 ms to 120 ms on 500k+ row tables; designed normalized schemas with role-based auth; resolved 6 production issues and joined 15+ code reviews.</p></div>
+    <div class="tl rv"><div class="when">MAY 2026 — JUL 2026</div><h3>Software Engineering Intern</h3><div class="org">Supertech Instrumentation Services · Thane, India</div><p>Built 12 REST endpoints (Node, Express, PostgreSQL) for a React dashboard used by plant operators; cut API response time from 850 ms to 120 ms on 500k+ rows with composite indexes and keyset pagination; added JWT auth with role-based access and Jest/Supertest tests; fixed a timezone bug in daily energy totals and replaced a manual Excel compliance process with server-side PDF reports.</p></div>
     <div class="tl rv"><div class="when">2024 — 2028</div><h3>B.Tech, Computer Science &amp; Engineering</h3><div class="org">Vellore Institute of Technology · CGPA 9.36</div><p>DSA, algorithm design, database systems, computer networks, OOP, computer architecture, theory of computation and discrete mathematics.</p></div>
   </div>
 </div></section>

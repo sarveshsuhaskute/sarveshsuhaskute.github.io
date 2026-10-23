@@ -180,7 +180,14 @@ h2{font-size:clamp(2.2rem,5vw,3.8rem);margin-bottom:56px;max-width:800px}
 .tl .when{font-family:'JetBrains Mono';font-size:.8rem;color:var(--b)}
 .tl h3{font-size:1.6rem;margin:6px 0 2px}
 .tl .org{color:var(--mute);margin-bottom:10px}
-.tl p{color:var(--mute);max-width:640px}
+.tl p{color:var(--mute);max-width:640px;font-size:.85rem;margin-top:14px}
+.tl .tags{margin-top:12px}
+.pts{list-style:none;margin-top:14px;max-width:680px}
+.pts li{position:relative;padding:7px 0 7px 22px;color:var(--mute)}
+.pts li::before{content:"";position:absolute;left:2px;top:17px;width:8px;height:2px;border-radius:2px;background:var(--b)}
+.pts b{color:var(--text);font-weight:500}
+.tl.now::before{background:var(--a);animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(var(--rgb),.55)}80%,100%{box-shadow:0 0 0 12px rgba(var(--rgb),0)}}
 
 /* contact */
 #contact{text-align:center}
@@ -323,8 +330,20 @@ footer{padding:36px 0;border-top:1px solid var(--line);text-align:center;color:v
   <div class="eyebrow rv">04 — Journey</div>
   <h2 class="rv">The path <span class="grad-text">so far.</span></h2>
   <div class="timeline">
-    <div class="tl rv"><div class="when">MAY 2026 — JUL 2026</div><h3>Software Engineering Intern</h3><div class="org">Supertech Instrumentation Services · Thane, India</div><p>Built 12 REST endpoints (Node, Express, PostgreSQL) for a React dashboard used by plant operators; cut API response time from 850 ms to 120 ms on 500k+ rows with composite indexes and keyset pagination; added JWT auth with role-based access and Jest/Supertest tests; fixed a timezone bug in daily energy totals and replaced a manual Excel compliance process with server-side PDF reports.</p></div>
-    <div class="tl rv"><div class="when">2024 — 2028</div><h3>B.Tech, Computer Science &amp; Engineering</h3><div class="org">Vellore Institute of Technology · CGPA 9.36</div><p>DSA, algorithm design, database systems, computer networks, OOP, computer architecture, theory of computation and discrete mathematics.</p></div>
+    <div class="tl rv"><div class="when">MAY 2026 — JUL 2026</div><h3>Software Engineering Intern</h3><div class="org">Supertech Instrumentation Services · Thane, India</div>
+      <ul class="pts">
+        <li>Built <b>12 REST APIs</b> and the React dashboard that plant operators use every day</li>
+        <li>Made it <b>7× faster</b> — 850 ms down to 120 ms — on 500,000+ rows of sensor data</li>
+        <li>Added secure logins with <b>role-based access</b> for admins, engineers and operators</li>
+        <li>Fixed a <b>timezone bug</b> that was skewing daily energy reports</li>
+        <li>Replaced a manual Excel process with <b>automatic PDF compliance reports</b></li>
+      </ul>
+      <div class="tags"><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">PostgreSQL</span><span class="tag">React</span><span class="tag">JWT</span><span class="tag">Jest</span></div>
+    </div>
+    <div class="tl now rv"><div class="when">2024 — 2028 · IN PROGRESS</div><h3>B.Tech, Computer Science &amp; Engineering</h3><div class="org">Vellore Institute of Technology, Vellore · CGPA 9.36</div>
+      <p>Core coursework</p>
+      <div class="tags"><span class="tag">Data Structures &amp; Algorithms</span><span class="tag">Algorithm Design</span><span class="tag">Database Systems</span><span class="tag">Computer Networks</span><span class="tag">OOP</span><span class="tag">Computer Architecture</span><span class="tag">Theory of Computation</span><span class="tag">Discrete Maths</span></div>
+    </div>
   </div>
 </div></section>
 
